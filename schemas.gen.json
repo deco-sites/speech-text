@@ -65,6 +65,7 @@
               "deco-sites/std/loaders/vtex/proxy.ts",
               "deco-sites/std/loaders/vtex/user.ts",
               "deco-sites/std/loaders/vtex/wishlist.ts",
+              "./islands/Input.tsx",
               "$live/handlers/devPage.ts",
               "$live/handlers/fresh.ts",
               "$live/handlers/proxy.ts",
@@ -10711,6 +10712,22 @@
         }
       }
     },
+    "Li9pc2xhbmRzL0lucHV0LnRzeA==": {
+      "title": "./islands/Input.tsx",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/Input.tsx"
+          ],
+          "default": "./islands/Input.tsx"
+        }
+      }
+    },
     "JGxpdmUvaGFuZGxlcnMvZGV2UGFnZS50cw==": {
       "title": "Private Fresh Page",
       "description": "Useful for pages under development.",
@@ -12218,7 +12235,14 @@
     },
     "islands": {
       "title": "islands",
-      "anyOf": []
+      "anyOf": [
+        {
+          "$ref": "#/definitions/Resolvable"
+        },
+        {
+          "$ref": "#/definitions/Li9pc2xhbmRzL0lucHV0LnRzeA=="
+        }
+      ]
     },
     "handlers": {
       "title": "handlers",

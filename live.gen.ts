@@ -5,10 +5,11 @@
 import { DecoManifest } from "$live/types.ts";
 import * as $$$$0 from "./routes/styles.css.ts";
 import * as $$$$1 from "./routes/_app.tsx";
-import * as $$$$$$$$0 from "./sections/Hero.tsx";
-import * as $$$$$$$$1 from "./sections/Theme.tsx";
-import * as $$$$$$$$2 from "./sections/SimpleTextList.tsx";
-import * as $$$$$$$$3 from "./sections/ParagraphList.tsx";
+import * as $$$$$0 from "./islands/Input.tsx";
+import * as $$$$$$$$0 from "./sections/Theme.tsx";
+import * as $$$$$$$$1 from "./sections/Hero.tsx";
+import * as $$$$$$$$2 from "./sections/ParagraphList.tsx";
+import * as $$$$$$$$3 from "./sections/SimpleTextList.tsx";
 import * as $live_workflows from "$live/routes/live/workflows/run.ts";
 import * as $live_middleware from "$live/routes/_middleware.ts";
 import * as $live_workbench from "$live/routes/live/workbench.ts";
@@ -152,16 +153,19 @@ const manifest = {
     "./routes/live/workflows/run.ts": $live_workflows,
     "./routes/styles.css.ts": $$$$0,
   },
+  "islands": {
+    "./islands/Input.tsx": $$$$$0,
+  },
   "sections": {
     "$live/sections/Conditional_Beta.tsx": i2$$$$$0,
     "$live/sections/EmptySection.tsx": i2$$$$$1,
     "$live/sections/PageInclude.tsx": i2$$$$$2,
     "$live/sections/Slot.tsx": i2$$$$$3,
     "$live/sections/UseSlot.tsx": i2$$$$$4,
-    "deco-sites/speech-text/sections/Hero.tsx": $$$$$$$$0,
-    "deco-sites/speech-text/sections/ParagraphList.tsx": $$$$$$$$3,
-    "deco-sites/speech-text/sections/SimpleTextList.tsx": $$$$$$$$2,
-    "deco-sites/speech-text/sections/Theme.tsx": $$$$$$$$1,
+    "deco-sites/speech-text/sections/Hero.tsx": $$$$$$$$1,
+    "deco-sites/speech-text/sections/ParagraphList.tsx": $$$$$$$$2,
+    "deco-sites/speech-text/sections/SimpleTextList.tsx": $$$$$$$$3,
+    "deco-sites/speech-text/sections/Theme.tsx": $$$$$$$$0,
     "deco-sites/std/sections/Analytics.tsx": i2$$$$$5,
     "deco-sites/std/sections/configButterCMS.global.tsx": i2$$$$$6,
     "deco-sites/std/sections/configNuvemShop.tsx": i2$$$$$7,
@@ -288,7 +292,6 @@ const manifest = {
     "deco-sites/std/accounts/vtex.ts": i2$$4,
     "deco-sites/std/accounts/yourViews.ts": i2$$5,
   },
-  "islands": {},
   "baseUrl": import.meta.url,
 };
 
