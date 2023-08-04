@@ -6,10 +6,8 @@ export default function Input() {
   const input = useSignal("");
   let recognition: any = null;
 
-  function handleListen() {
-    console.log("handleListen", input.value);
+  if ((window as any).webkitSpeechRecognition) {
     recognition = new (window as any).webkitSpeechRecognition();
-    recognition.lang = "pt-BR";
     recognition.onstart = () => {
       status.value = "Listening...";
     };
@@ -21,6 +19,11 @@ export default function Input() {
       status.value = "Buscar";
       input.value = "";
     };
+  }
+
+  function handleListen() {
+    console.log("handleListen", input.value);
+    recognition.lang = "pt-BR";
 
     if (recognition) {
       recognition.start();
