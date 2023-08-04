@@ -1,17 +1,10 @@
 import { useSignal } from "@preact/signals";
-function is_server() {
-  return !(typeof window != "undefined" && window.document);
-}
 
 export default function Input() {
   const status = useSignal("Click to Listen");
   const result = useSignal("");
   const input = useSignal("");
   let recognition: any = null;
-
-  if (is_server()) {
-    console.log("teste");
-  }
 
   function handleListen() {
     console.log("handleListen", input.value);
@@ -36,14 +29,13 @@ export default function Input() {
   return (
     <>
       <input
-        class="bg-slate-600 text-white"
+        class="bg-slate-900 text-purple-50"
         placeholder="Busca"
         type="text"
-        value={input.value}
-        onChange={(e) => input.value = e.target.value}
+        value={result.value}
       />
       <button onClick={handleListen}>{status.value}</button>
-      <p>{result.value}</p>
+      {/* <p>{result.value}</p> */}
     </>
   );
 }
